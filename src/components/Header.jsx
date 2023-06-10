@@ -29,7 +29,7 @@ function Header() {
   return (
     <Container>
       <Logo>
-        <a href='/#'><img src='./images/logo.svg' alt='tesla logo' /></a>
+        <a href='/#'><img src='images/logo.svg' alt='tesla logo' /></a>
       </Logo>
 
       <MiddleMenu>

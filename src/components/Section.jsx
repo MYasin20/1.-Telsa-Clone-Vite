@@ -31,7 +31,7 @@ function Section({ name, id, desc, img, leftBtnText, rightBtnText, underlined}) 
           </Fade>
         </ButtonGroup>
 
-          <DownArrow src='./images/down-arrow.svg'/>
+          <DownArrow src='images/down-arrow.svg'/>
       </Buttons>
 
     </Wrap>
@@ -44,7 +44,7 @@ export default Section;
 const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: ${props => `url('./images/${props.bgImg}');`};
+  background-image: ${props => `url('images/${props.bgImg}');`};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
