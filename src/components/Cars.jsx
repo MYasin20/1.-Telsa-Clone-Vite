@@ -4,14 +4,14 @@ import cars from '../carInfo';
 
 const displayCar = () => {
   return cars.map((car, index) => (
-    <Section 
+    <Section
       key={index}
       id={index}
       name={car.title}
       desc={car.description}
       img={car.image}
-      leftBtnText="Order Now"
-      rightBtnText="Demo Drive"
+      leftBtnText="Explore Inventory"
+      rightBtnText="Custom Order"
       underlined={true}
     />
   ));

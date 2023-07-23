@@ -1,37 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Fade } from "react-awesome-reveal";
+import { Fade as Slide } from "react-awesome-reveal";
 
-function Section({ name, id, desc, img, leftBtnText, rightBtnText, underlined}) {
-  
+function Section({ name, id, desc, img, leftBtnText, rightBtnText, underlined }) {
+
   return (
     <Wrap bgImg={img}>
-      <Fade direction='up'>
+      <Slide direction='down'>
         <ItemText isUnderlined={underlined}>
-          <h1>{ name }</h1>
-            { id === 1 ?
-              <p>{ desc }</p> :
-              <a href='/#'>{ desc }</a>
-            }
+          <h1>{name}</h1>
+          {id < 2 ?
+            <>
+              <p>{desc[0]}</p>
+              <p style={{ marginTop: '0.5rem' }}>{desc[1]}</p>
+            </>
+            :
+            <a href='/#'>{desc}</a>
+          }
         </ItemText>
-      </Fade>
+      </Slide>
 
       <Buttons>
         <ButtonGroup>
-          <Fade direction='up'>
+          <Slide direction='up'>
             <LeftButton>
               {leftBtnText}
             </LeftButton>
-            { rightBtnText &&
-            <RightButton>
-              {rightBtnText}
-            </RightButton>
+            {rightBtnText &&
+              <RightButton>
+                {rightBtnText}
+              </RightButton>
             }
 
-          </Fade>
+          </Slide>
         </ButtonGroup>
 
-          <DownArrow src='images/down-arrow.svg'/>
+        {/* <DownArrow src='images/down-arrow.svg' /> */}
       </Buttons>
 
     </Wrap>
@@ -64,12 +68,13 @@ const ItemText = styled.div`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   & a {
     font-size: 1rem;
-    border-bottom: ${props => props.isUnderlined && `2px solid gray;`};
+    border-bottom: ${props => props.isUnderlined && `2px solid;`};
+    border-color: ${props => props.isUnderlined && `rgba(0, 0, 0, 0.5);`};
   }
 
 `
@@ -87,10 +92,10 @@ const ButtonGroup = styled.div`
 `
 
 const LeftButton = styled.div`
-  background-color: rgba(61, 64, 68, 0.8);
+  background-color: white;
+  color: rgba(61, 64, 68, 0.8);
   width: 256px;
   height: 40px;
-  color: white;
   border-radius: 3px;
   margin: 10px;
   cursor: pointer;
@@ -99,23 +104,23 @@ const LeftButton = styled.div`
   justify-content: center;
   font-weight: 500;
   :hover {
-    background-color: rgba(61, 64, 68, 1);
+    background-color: white;
   }
 `
 
 const RightButton = styled(LeftButton)`
-  background-color: white;
-  color: black;
+  background-color: rgba(61, 64, 68, 0.8);
+  color: white;
   opacity: 0.65;
   :hover {
-    background-color: white;
+    background-color: rgba(61, 64, 68, 1);
     opacity: 1;
   }
 `
 
-const DownArrow = styled.img`
-  height: 40px;
-  animation: animateDown infinite 1.5s;
-  cursor: pointer;
-  /* overflow-x: hidden; */
-`
+// const DownArrow = styled.img`
+//   height: 40px;
+//   animation: animateDown infinite 1.5s;
+//   cursor: pointer;
+//   /* overflow-x: hidden; */
+// `

@@ -8,10 +8,9 @@ function Footer() {
       <a href='/#'>Privacy & Legal</a>
       <a href='/#'>Vehicle Recalls</a>
       <a href='/#'>Contact</a>
-      <a href='/#'>Career</a>
       <a href='/#'>News</a>
-      <a href='/#'>Engage</a>
-      <a href='/#'>Location</a>
+      <a href='/#'>Get Updates</a>
+      <a href='/#'>Locations</a>
     </FooterContainer>
   )
 }

@@ -2,18 +2,8 @@
 const carInfo = [
   {
     "id": 0,
-    "title": "Model Y",
-    "description": "View Inventory",
-    "image": "model-y.jpg",
-    "range": "410",
-    "time": "2.05",
-    "topSpeed": "190",
-    "peakPower": "1,040"
-  },
-  {
-    "id": 1,
     "title": "Model 3",
-    "description": "Leasing starting at $349/mo",
+    "description": ['Starting at $32,740', 'After Federal Tax Credit'],
     "image": "model-3.jpg",
     "range": "400",
     "time": "2.99",
@@ -21,9 +11,19 @@ const carInfo = [
     "peakPower": "900"
   },
   {
+    "id": 1,
+    "title": "Model Y",
+    "description": ['Starting at $40,240', 'After Federal Tax Credit'],
+    "image": "model-y.jpg",
+    "range": "410",
+    "time": "2.05",
+    "topSpeed": "190",
+    "peakPower": "1,040"
+  },
+  {
     "id": 2,
     "title": "Model S",
-    "description": "View Inventory",
+    "description": "Explore Inventory",
     "image": "model-s.jpg",
     "range": "390",
     "time": "1.99",
@@ -33,21 +33,21 @@ const carInfo = [
   {
     "id": 3,
     "title": "Model X",
-    "description": "View Inventory",
+    "description": "Explore Inventory",
     "image": "model-x.jpg",
     "range": "350",
     "time": "1.55",
     "topSpeed": "150",
     "peakPower": "1,130"
-},
-  
+  },
+
 ]
 
 const solarPanelAndRoofs = [
   {
     "id": 4,
     "title": "Solar Panels",
-    "description": "Lowest Cost Solar Panels in America",
+    "description": "Schedule a Virtual Consultation",
     "image": "solar-panel.jpg",
   },
   {
@@ -56,16 +56,22 @@ const solarPanelAndRoofs = [
     "description": "Produce Clean Energy From Your Roof",
     "image": "solar-roof.jpg",
   },
+  {
+    "id": 6,
+    "title": "Powerwall",
+    "description": "",
+    "image": "powerwall.jpg",
+  }
 ]
 
 const accessories = [
   {
-    "id": 6,
+    "id": 7,
     "title": "Accessories",
     "description": " ",
     "image": "accessories.jpg",
   }
 ]
-export {solarPanelAndRoofs, accessories};
+export { solarPanelAndRoofs, accessories };
 
 export default carInfo;
