@@ -48,12 +48,12 @@ function Header() {
       </RightMenu>
 
       <MenuBurger onClick={handleMenu}>
-        <a href='/#'>Menu</a>
+        <a href='#'>Menu</a>
       </MenuBurger>
 
       <BurgerNav isOpen={isMenuOpen}>
         <CloseWrapper >
-          <BurgerClose onClick={handleMenu}/>
+          <BurgerClose onClick={handleMenu} />
         </CloseWrapper>
         {burgerNavLists.map((list, index) => (
           <li key={index}><a href='/#'>{list}</a></li>
@@ -68,7 +68,7 @@ function Header() {
             </div>
           </Language>
         </li>
-        
+
       </BurgerNav>
 
     </Container>
